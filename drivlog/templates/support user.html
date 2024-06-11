@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drivlog - поддержка </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+         :root {
+            --bg-color-light: #f8f9fa;
+            --bg-color-dark: #343a40;
+            --text-color-light: #343a40;
+            --text-color-dark: #f8f9fa;
+            --link-hover-color: #f8c146;
+            --footer-bg-color-dark: #23272b;
+        }
+
+        body {
+            padding-bottom: 100px;
+            margin-bottom: 50px;
+            position: relative;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+        }
+
+        .navbar {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-link {
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--link-hover-color) !important;
+        }
+
+        .btn-link {
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .btn-link:hover {
+            color: var(--link-hover-color);
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--footer-bg-color-dark);
+            color: var(--text-color-dark);
+            padding: 20px 0;
+        }
+
+        .footer-links {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--text-color-dark);
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--link-hover-color);
+        }
+
+        .footer-links li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        .dark-theme {
+            --bg-color-light: #343a40;
+            --bg-color-dark: #23272b;
+            --text-color-light: #f8f9fa;
+            --text-color-dark: #343a40;
+        }
+        .theme-toggle {
+            position: fixed;
+            bottom: 70px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .auth-form {
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--bg-color-light);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .auth-form.dark-theme {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+        }
+
+        .auth-form .form-control {
+            border-radius: 5px;
+        }
+
+        .modal-content.dark-theme {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+        }
+
+        .modal-header.dark-theme, .modal-body.dark-theme, .modal-footer.dark-theme {
+            border-color: var(--text-color-light);
+        }
+
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .card.dark-theme{
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+        }
+
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal-content.dark-theme{
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+        }
+
+        .fa-user{
+            color: var(--bg-color-light);
+        }
+
+        .fa-user:hover{  
+            transition: color 0.3s;
+            color:#f8c146;
+        }
+
+        .fa-user.dark-theme{
+            color: #f8f9fa;
+        }
+
+        .fa-user.dark-theme:hover{
+            transition: color 0.3s;
+            color:#f8c146;
+        }
+
+        .fa-user.dark-theme li{
+            text-decoration: none;
+    
+        }
+        .dropdown-menu.dark-theme {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+        }
+
+        .dropdown-menu.dark-theme :hover {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+            
+        }
+
+        .dropdown-menu.dark-theme a {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-light);
+        }
+
+        .dropdown-toggle{
+            color: #f8f9fa;  
+        }
+
+        .form-control.dark-theme {
+            background-color: #343a40;
+            border-color: #191c1f;
+            color: #c7c7c7;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Drivlog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="main user.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fuel monitoring.html">Мониторинг топлива</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="detalis monitoring.html">Мониторинг ТО</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="support user.html">Поддержка</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">О проекте</a>
+                    </li>
+                </ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="settings user.html">Настройки</a>
+                        <a class="dropdown-item text-danger" href="index.html">Выход</a>
+                    </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1><strong>Обратная связь</strong></h1>
+        <h5>Обратитесь к нам, чтобы поделиться своими замечаниями и предложить идеи для совершенствования</h5>
+        <div class="card card-custom">
+            <div class="card-body">
+                <form id="messageForm" class="mt-3">
+                    <div class="form-group">
+                        <label for="partName">Содержание сообщения:</label>
+                        <textarea id="messageContent" name="messageContent" class="form-control" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class ="container mt-5">
+        <div class="card card-custom mt-2">
+            <div class="card-body">
+                <h3><strong>Ответы</strong></h3>  
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="modal fade" id="sendMessageModal" tabindex="-1" role="dialog" aria-labelledby="sendMessageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="sendMessageModalLabel"><strong>Внимание</strong></h3>
+                </div>
+                <div class="modal-body">
+                    Ваше сообщение успешно отправлено.
+                </div>
+                <div class="d-grid gap-1 m-2">
+                    <button type="button" class="btn btn-dark btn-block" data-dismiss="modal">Принять</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="theme-toggle">
+        <button class="btn btn-dark" data-toggle="modal" data-target="#themeModal">
+            <i class="fas fa-adjust"></i>
+        </button>
+    </div>
+
+    <div class="modal fade" id="themeModal" tabindex="-1" role="dialog" aria-labelledby="themeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="themeModalLabel">Выбор темы</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button class="btn btn-secondary btn-block" id="autoTheme">Автоматически</button>
+                    <button class="btn btn-light btn-block" id="lightTheme">Светлая тема</button>
+                    <button class="btn btn-dark btn-block" id="darkTheme">Темная тема</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <div class="footer-links">
+                <a href="main user.html">Главная</a>
+                <a href="fuel monitoring.html">Мониторинг топлива</a>
+                <a href="detalis monitoring.html">Мониторинг ТО</a>
+                <a href="support user.html">Поддержка</a>
+                <a href="about.html">О проекте</a>
+            </div>
+            &copy; 2024 Drivlog. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.querySelectorAll('.card').forEach(card => card.classList.add('dark-theme'));
+                document.querySelectorAll('.modal-content').forEach(card => card.classList.add('dark-theme'));
+                document.querySelectorAll('.form-control').forEach(card => card.classList.add('dark-theme'));
+                document.querySelectorAll('.fa-user').forEach(card => card.classList.add('dark-theme'));
+                document.querySelectorAll('.dropdown-menu').forEach(card => card.classList.add('dark-theme'));
+                document.querySelector('.auth-form').classList.add('dark-theme');
+            } else {
+                document.querySelectorAll('.modal-content').forEach(el => el.classList.add('dark-theme'));}
+                if (theme === 'light'){
+                document.body.classList.remove('dark-theme');
+                document.querySelectorAll('.card').forEach(card => card.classList.remove('dark-theme'));
+                document.querySelectorAll('.modal-content').forEach(card => card.classList.remove('dark-theme'));
+                document.querySelectorAll('.form-control').forEach(card => card.classList.remove('dark-theme'));
+                document.querySelectorAll('.fa-user').forEach(card => card.classList.remove('dark-theme'));
+                document.querySelectorAll('.dropdown-menu').forEach(card => card.classList.remove('dark-theme'));
+                document.querySelector('.auth-form').classList.remove('dark-theme');
+            } else {
+                document.querySelectorAll('.modal-content').forEach(el => el.classList.add('dark-theme'));}
+        }
+
+        function autoTheme() {
+            const hour = new Date().getHours();
+            if (hour >= 18 || hour < 6) {
+                applyTheme('dark');
+            } else {
+                applyTheme('light');
+            }
+        }
+
+        document.getElementById('autoTheme').addEventListener('click', function () {
+            autoTheme();
+            localStorage.setItem('theme', 'auto');
+            $('#themeModal').modal('hide');
+        });
+
+        document.getElementById('lightTheme').addEventListener('click', function () {
+            applyTheme('light');
+            localStorage.setItem('theme', 'light');
+            $('#themeModal').modal('hide');
+        });
+
+        document.getElementById('darkTheme').addEventListener('click', function () {
+            applyTheme('dark');
+            localStorage.setItem('theme', 'dark');
+            $('#themeModal').modal('hide');
+        });
+
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'auto') {
+                    autoTheme();
+                } else {
+                    applyTheme(savedTheme);
+                }
+            } else {
+                autoTheme();
+            }
+        });
+
+        document.getElementById("messageForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    // Ваша логика отправки сообщения здесь
+
+    $('#sendMessageModal').modal('show'); // Открыть модальное окно
+});
+
+    </script>
+
+</body>
+</html>
